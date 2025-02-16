@@ -10,6 +10,37 @@ body {
     transition: background-color 0.5s, color 0.5s;
 }
 
+.language-selector {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.language-selector button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-decoration: underline;
+}
+
+.language-selector button:hover {
+    color: #0056b3;
+}
+
+.body-dark .language-selector button {
+    color: #ffffff; /* White text color in dark mode */
+}
+
+.body-dark .language-selector button:hover {
+    color: #cccccc; /* Light gray text color on hover in dark mode */
+}
+
 .container {
     text-align: center;
     background: white;
@@ -146,7 +177,7 @@ body a {
 
     input {
         width: 100%;
-        max-width: 100%;
+        max-width: 300px; /* Limit phone input field size on mobile devices */
     }
 
     button {
@@ -167,5 +198,10 @@ body a {
     #switch-image {
         height: 100px;
         width: 100px;
+    }
+
+    .language-selector button {
+        font-size: 10px;
+        padding: 3px 5px;
     }
 }

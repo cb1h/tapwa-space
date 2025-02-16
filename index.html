@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>tap 2 chat</title>
+    <title>WhatsApp chat without saving contact</title>
+    <meta name="description" content="Easily start a WhatsApp chat without saving the contact. Just enter the phone number and tap to chat.">
+    <meta name="keywords" content="WhatsApp, chat, no contact, tap to chat">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>WhatsApp chat with no saving contact</h1>
-        <input type="tel" id="phoneNumber" placeholder="Type phone number">
-        <button id="sendButton">Chat</button>
-        <p id="errorMessage" class="error-message"></p>
+        <h1 data-lang="title">WhatsApp chat with no saving contact</h1>
+        <input type="tel" id="phoneNumber" placeholder="Type phone number" aria-label="Phone number" data-lang-placeholder="phonePlaceholder">
+        <button id="sendButton" aria-label="Chat" data-lang="chatButton">Chat</button>
+        <p id="errorMessage" class="error-message" role="alert"></p>
     </div>
     <div class="wrapper">
-        <p>Dark/Light Mode</p>
-        <div id="switch" class="darkActive" onclick="darkModeSwitch1()">
-            <img id="switch-image" src="https://ih1.redbubble.net/image.1502616991.7562/st,small,845x845-pad,1000x1000,f8f8f8.jpg">
+        <p data-lang="mode">Dark/Light Mode</p>
+        <div id="switch" class="darkActive" onclick="darkModeSwitch1()" role="button" tabindex="0" aria-label="Toggle dark/light mode">
+            <img id="switch-image" src="https://ih1.redbubble.net/image.1502616991.7562/st,small,845x845-pad,1000x1000,f8f8f8.jpg" alt="Toggle dark/light mode">
         </div>
         <a href="https://www.redbubble.com/people/AshOriginate/shop"></a>
+    </div>
+    <div class="language-selector">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('zh')">中文</button>
+        <button onclick="setLanguage('pt')">Português</button>
     </div>
     <script src="script.js"></script>
 </body>
